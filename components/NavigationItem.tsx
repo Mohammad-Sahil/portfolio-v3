@@ -29,7 +29,7 @@ const NavigationItem = ({ item, index, linkStyle, aStyle }) => {
             sx={{
               transition: 'all 0.3s ease',
               ...(isActive && {
-                backgroundColor: 'rgba(148, 163, 184, 0.1)',
+                backgroundColor: '#8b5cf6',
               }),
               borderRadius: '.5rem',
               '&:hover': {
@@ -40,7 +40,7 @@ const NavigationItem = ({ item, index, linkStyle, aStyle }) => {
           >
             <IconComponent
               style={{
-                color: isHovered || isActive ? '#c084fc' : '#94A3B8',
+                color: isHovered || isActive ? '#FFF' : '#64748b',
                 fontSize: '1.6rem',
                 transition: 'all 0.3s ease',
               }}

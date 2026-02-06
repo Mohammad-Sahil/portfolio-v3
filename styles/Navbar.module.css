@@ -1,17 +1,18 @@
 .navbar_container {
   margin-left: auto !important;
   margin-right: 0 !important;
-  width: 90px;
-  height: calc(100vh - 16px);
-  background-color: #1e293b;
-  /* background: linear-gradient(to bottom right, #1e293b, #0f172a); */
+  width: 75px;
+  height: calc(100vh - 2.4rem);
   position: relative;
-  border-left: 1px solid #38384a;
+  background: rgba(22, 27, 34, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
 }
 
 .nav_menu {
   height: calc(100% - 18px);
-  margin: 9px;
+  margin: 14px;
   /* background-color: #2C2C38; */
   border-radius: 4px;
   font-size: 10px;

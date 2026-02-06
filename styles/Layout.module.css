@@ -1,11 +1,11 @@
 .home_container {
   position: relative;
-  background-color: #0e1629;
-  background-image: url('../public/bgCenter.png');
+  /* background-color: #0e1629; */
+  /* background-image: url('../public/bgCenter.png'); */
   background-repeat: repeat;
-  width: calc(100% - 380px);
-  height: calc(100vh - 16px);
-  padding: 0 25px 0 25px;
+  width: calc(100% - 290px - 75px);
+  height: calc(100vh - 2.4rem);
+  padding: 0 1.54rem 0 1.54rem;
   overflow-y: scroll;
 }
 
@@ -23,15 +23,15 @@
   overflow-x: hidden !important;
   overflow-y: hidden;
   /* background: rgba(208, 0, 245, 0.7); */
-  background: linear-gradient(45deg, #ec4899, #8b5cf6, #ec4899, #8b5cf6);
+  /* background: linear-gradient(45deg, #ec4899, #8b5cf6, #ec4899, #8b5cf6); */
+  background-color: rgb(11 14 20);
   background-size: 400% 400%;
-  transition:
-    background 0.2s ease,
-    background-size 0.2s ease;
+  transition: background 0.2s ease, background-size 0.2s ease;
 }
 
 .layout_margin {
-  padding: 8px;
+  /* padding: 8px; */
+  padding: 1.2rem;
   /* width: 1280px; */
   margin: 0 auto;
 }
