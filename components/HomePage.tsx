@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <div
       className={styles.home_container_container}
-      style={{ marginTop: '26px' }}
+    // style={{ marginTop: '26px' }}
     >
       <HeroSection />
       <Cards4 />

@@ -8,18 +8,73 @@ function HeroSection() {
     return (
         <div className="home_banner" style={{ border: '1px solid #38384a' }}>
             <div>
-                <div className="available-badge">
-                    <span className="green-pulse-dot"></span>
-                    <span>AVAILABLE FOR WORK</span>
+                <div className="row">
+                    <div className="available-badge col-md-3 col-12 me-3">
+                        <span className="green-pulse-dot"></span>
+                        <span>AVAILABLE FOR WORK</span>
+                    </div>
+                    <div className="meeting-badge col-md-3 col-12"
+                        onClick={() =>
+                            window.open(
+                                'https://calendly.com/tsharpsahil/portfolio',
+                                '_blank',
+                                'noopener,noreferrer'
+                            )
+                        }
+                    >
+                        <span>Schedule a Meeting</span>
+                    </div>
                 </div>
                 <h2>
                     Building <span className="gradient-text">production-ready</span>
                     <br />
                     systems that scale.
                 </h2>
-                <div className="flex items-center gap-3 mb-8">
-                    <div className="h-px bg-gray-500 w-8"></div>
+                <div className="mb-8">
+                    {/* <div className="h-px bg-gray-500 w-8"></div> */}
                     <code className="code-container">
+                        <div
+                            className="row align-items-center px-3"
+                            style={{
+                                height: '34px',
+                                background: 'rgba(0, 0, 0, 0.2)',
+                                borderBottom: '1px solid #333',
+                                borderTopLeftRadius: '8px',
+                                borderTopRightRadius: '8px',
+                                marginBottom: '12px'
+                            }}
+                        >
+                            <div className="d-flex gap-2">
+                                <span
+                                    style={{
+                                        width: '12px',
+                                        height: '12px',
+                                        backgroundColor: '#ff5f56',
+                                        borderRadius: '50%',
+                                        display: 'inline-block',
+                                    }}
+                                />
+                                <span
+                                    style={{
+                                        width: '12px',
+                                        height: '12px',
+                                        backgroundColor: '#ffbd2e',
+                                        borderRadius: '50%',
+                                        display: 'inline-block',
+                                    }}
+                                />
+                                <span
+                                    style={{
+                                        width: '12px',
+                                        height: '12px',
+                                        backgroundColor: '#27c93f',
+                                        borderRadius: '50%',
+                                        display: 'inline-block',
+                                    }}
+                                />
+                            </div>
+                        </div>
+
                         &lt;<i>code</i>&gt;{' '}
                         <TypeAnimation
                             cursor={true}
@@ -38,6 +93,7 @@ function HeroSection() {
                         />
                         &lt;/<i>code</i>&gt;
                     </code>
+
                 </div>
                 <div className="button-group">
                     <Link href="/projects" className="text-decoration-none text-white">

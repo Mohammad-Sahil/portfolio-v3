@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Senior Engineer Portfolio Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Fira+Code:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B5CF6",
+                        secondary: "#D946EF",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#0B0E14",
+                        "card-dark": "#161B22",
+                        "accent-muted": "#1F2937",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Inter", "sans-serif"],
+                        mono: ["Fira Code", "monospace"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                        'xl': '1rem',
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            background-color: #0B0E14;
+            color: #E5E7EB;
+        }
+        .glass-panel {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #fff 0%, #9CA3AF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.1), transparent),
+                        radial-gradient(circle at bottom left, rgba(217, 70, 239, 0.05), transparent);
+        }
+        .metric-card-border {
+            position: relative;
+        }
+        .metric-card-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            border-radius: 0 0 0.75rem 0.75rem;
+            opacity: 0.5;
+        }
+        .border-purple::after { background: #8B5CF6; }
+        .border-blue::after { background: #3B82F6; }
+        .border-emerald::after { background: #10B981; }
+        .border-amber::after { background: #F59E0B; }::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
+    </style>
+</head>
+<body class="font-sans antialiased bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex p-4 lg:p-6 gap-6">
+<aside class="w-80 flex-shrink-0 hidden xl:flex flex-col gap-6">
+<div class="glass-panel rounded-xl p-8 flex flex-col items-center text-center">
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-primary to-secondary">
+<img alt="Mohammad Sahil Professional Headshot" class="w-full h-full rounded-full object-cover border-4 border-card-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe8fF5poAA3LKGA5lLbfGqX9ekfCDGXvplkt1cKaTRhlsuJjn2ibiBC4-IknXlstq32U99plCt7xqCRsQWhe-GnfpYoWZVSQn7uItucWBAm7BWRmMr0hCLBVQLC_tXK5d7exQNZRiIXrZklrWYkQ_VNLR3lnnBT2a7q2KhDt7Gz0_6I7FKpcc7qG9vEd1UdFqoxpEDo8Nyw-v9HIsi1uw2ExJzlnko_UKsiE3bC-4SRPDSdNwPdOadsCXOTuS4q4aBvOoucc3iMM-X"/>
+</div>
+<div class="absolute bottom-2 right-2 w-5 h-5 bg-emerald-500 border-4 border-card-dark rounded-full"></div>
+</div>
+<h1 class="text-2xl font-bold tracking-tight mb-1">Mohammad Sahil</h1>
+<p class="text-slate-400 text-sm font-medium mb-4">Senior Full-Stack Engineer</p>
+<div class="flex flex-wrap justify-center gap-2 mb-8">
+<span class="px-2 py-1 text-[10px] uppercase tracking-wider font-semibold rounded bg-slate-800 text-slate-300">Next.js</span>
+<span class="px-2 py-1 text-[10px] uppercase tracking-wider font-semibold rounded bg-slate-800 text-slate-300">Node.js</span>
+<span class="px-2 py-1 text-[10px] uppercase tracking-wider font-semibold rounded bg-slate-800 text-slate-300">TypeScript</span>
+<span class="px-2 py-1 text-[10px] uppercase tracking-wider font-semibold rounded bg-slate-800 text-slate-300">AWS</span>
+</div>
+<div class="w-full space-y-3 pt-6 border-t border-slate-800/50">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Residence</span>
+<span class="font-medium">India</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">City</span>
+<span class="font-medium">Prayagraj</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">DOB</span>
+<span class="font-medium">7 Nov 2001</span>
+</div>
+</div>
+<div class="w-full mt-8 flex justify-between">
+<div class="flex flex-col items-center gap-2">
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-slate-800" cx="28" cy="28" fill="transparent" r="24" stroke="currentColor" stroke-width="3"></circle>
+<circle class="text-primary" cx="28" cy="28" fill="transparent" r="24" stroke="currentColor" stroke-dasharray="150.7" stroke-dashoffset="15" stroke-width="3"></circle>
+</svg>
+<span class="absolute text-[10px] font-bold">90%</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-slate-500 tracking-widest">EN</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-slate-800" cx="28" cy="28" fill="transparent" r="24" stroke="currentColor" stroke-width="3"></circle>
+<circle class="text-primary" cx="28" cy="28" fill="transparent" r="24" stroke="currentColor" stroke-dasharray="150.7" stroke-dashoffset="0" stroke-width="3"></circle>
+</svg>
+<span class="absolute text-[10px] font-bold">100%</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-slate-500 tracking-widest">HI</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-slate-800" cx="28" cy="28" fill="transparent" r="24" stroke="currentColor" stroke-width="3"></circle>
+<circle class="text-primary" cx="28" cy="28" fill="transparent" r="24" stroke="currentColor" stroke-dasharray="150.7" stroke-dashoffset="90" stroke-width="3"></circle>
+</svg>
+<span class="absolute text-[10px] font-bold">40%</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-slate-500 tracking-widest">ES</span>
+</div>
+</div>
+<button class="w-full mt-8 bg-primary hover:bg-primary/90 transition-colors text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
+<span>Download CV</span>
+<span class="material-icons-outlined text-sm">file_download</span>
+</button>
+<div class="flex gap-4 mt-8 text-slate-500">
+<a class="hover:text-white transition-colors" href="#"><i class="material-icons-outlined text-xl">code</i></a>
+<a class="hover:text-white transition-colors" href="#"><i class="material-icons-outlined text-xl">alternate_email</i></a>
+<a class="hover:text-white transition-colors" href="#"><i class="material-icons-outlined text-xl">language</i></a>
+<a class="hover:text-white transition-colors" href="#"><i class="material-icons-outlined text-xl">person</i></a>
+</div>
+</div>
+</aside>
+<main class="flex-grow flex flex-col gap-6 overflow-hidden">
+<section class="glass-panel rounded-xl flex-grow flex flex-col justify-center px-12 hero-gradient relative overflow-hidden min-h-[480px]">
+<div class="relative z-10 max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-xs font-semibold mb-8">
+<span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                    AVAILABLE FOR WORK
+                </div>
+<h2 class="text-6xl font-extrabold mb-6 leading-[1.1]">
+<span class="text-white">Building</span>
+<span class="gradient-text">production-ready</span><br/>
+<span class="text-white">systems that scale.</span>
+</h2>
+<div class="flex items-center gap-4 text-slate-400 font-mono text-sm mb-10">
+<div class="w-8 h-[1px] bg-slate-700"></div>
+<code>&lt;code&gt;I deploy scalable cloud solutions using Firebase, AWS &amp; Serverless &lt;/code&gt;</code>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-lg text-sm uppercase tracking-widest flex items-center gap-2 transition-all">
+                        Explore Work
+                        <span class="material-icons-outlined text-sm">arrow_forward</span>
+</button>
+<button class="bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold py-4 px-8 rounded-lg text-sm uppercase tracking-widest transition-all">
+                        Contact Me
+                    </button>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="glass-panel p-6 rounded-xl metric-card-border border-purple">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-icons-outlined text-primary">rocket_launch</span>
+<span class="text-[10px] uppercase font-bold tracking-[0.2em] text-slate-500">Shipped</span>
+</div>
+<div class="text-4xl font-bold text-white mb-1">10+</div>
+<div class="text-xs text-slate-500 font-medium">Production Projects</div>
+</div>
+<div class="glass-panel p-6 rounded-xl metric-card-border border-blue">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-icons-outlined text-blue-400">schedule</span>
+<span class="text-[10px] uppercase font-bold tracking-[0.2em] text-slate-500">Experience</span>
+</div>
+<div class="text-4xl font-bold text-white mb-1">3+</div>
+<div class="text-xs text-slate-500 font-medium">Years in Industry</div>
+</div>
+<div class="glass-panel p-6 rounded-xl metric-card-border border-emerald">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-icons-outlined text-emerald-400">public</span>
+<span class="text-[10px] uppercase font-bold tracking-[0.2em] text-slate-500">Deployed</span>
+</div>
+<div class="text-4xl font-bold text-white mb-1">30+</div>
+<div class="text-xs text-slate-500 font-medium">Active Integrations</div>
+</div>
+<div class="glass-panel p-6 rounded-xl metric-card-border border-amber">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-icons-outlined text-amber-400">layers</span>
+<span class="text-[10px] uppercase font-bold tracking-[0.2em] text-slate-500">Full Stack</span>
+</div>
+<div class="text-4xl font-bold text-white mb-1">4</div>
+<div class="text-xs text-slate-500 font-medium">Product Infrastructure Layers</div>
+</div>
+</section>
+</main>
+<nav class="w-16 flex-shrink-0 flex flex-col gap-4">
+<div class="glass-panel rounded-xl py-6 flex flex-col items-center gap-8">
+<a class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white transition-all shadow-lg shadow-primary/20" href="#">
+<span class="material-icons-outlined">home</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-icons-outlined">account_tree</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-icons-outlined">work_outline</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-icons-outlined">code</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-icons-outlined">rss_feed</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-icons-outlined">group</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-icons-outlined">extension</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-icons-outlined">palette</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-icons-outlined">contact_mail</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-icons-outlined">school</span>
+</a>
+</div>
+</nav>
+
+</body></html>
